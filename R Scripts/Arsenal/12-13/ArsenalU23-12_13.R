@@ -5,7 +5,7 @@ library(lubridate)
 # https://fcrstats.wordpress.com/2018/02/08/introduction-to-scraping-data-from-transfermarkt/
 
 #taking the html page
-page <- "https://www.transfermarkt.com/arsenal-fc-u23/leihspielerhistorie/verein/9249/saison_id/2013/leihe/ist/plus/1"
+page <- "https://www.transfermarkt.com/arsenal-fc-u23/leihspielerhistorie/verein/9249/saison_id/2012/leihe/ist/plus/1"
 
 #assinging the page
 scraped_page <- read_html(page)
@@ -52,18 +52,18 @@ LoanStart <- format(mdy(LoanStart),"%d/%m/%Y")
 LoanEnd <- format(mdy(LoanEnd),"%d/%m/%Y")
 
 #assiging dataframe
-ArsenalU23_14<- data.frame(LoanStart, LoanEnd, PlayerNames, Age, PlayerLoanClub, clubCountry, PlayerAppearences, MarketValue, MarketFluctuation, club, stringsAsFactors=FALSE)
+ArsenalU23_13<- data.frame(LoanStart, LoanEnd, PlayerNames, Age, PlayerLoanClub, clubCountry, PlayerAppearences, MarketValue, MarketFluctuation, club, stringsAsFactors=FALSE)
 
 #converts the "-" sign to a 0
 #https://stackoverflow.com/questions/53787049/converting-to-a-0-in-r
-ArsenalU23_14$PlayerAppearences[ArsenalU23_14$PlayerAppearences == "-"] <- "0"
-ArsenalU23_14$PlayerAppearences <- as.numeric(ArsenalU23_14$PlayerAppearences)
+ArsenalU23_13$PlayerAppearences[ArsenalU23_13$PlayerAppearences == "-"] <- "0"
+ArsenalU23_13$PlayerAppearences <- as.numeric(ArsenalU23_13$PlayerAppearences)
 #ChelseaU23_19$MarketValue[ChelseaU23_19$MarketValue == "-"] <- "0"
 #ChelseaU23_19$MarketValue <- as.character(ChelseaU23_19$MarketValue)
 
 
 
-write.csv(ArsenalU23_14, "C:/Users/peter/Desktop/PlayerData/13-14/ArsenalUnder23s_13-14.csv")
+write.csv(ArsenalU23_13, "C:/Users/peter/Desktop/PlayerData/Arsenal/12-13/ArsenalUnder23s_12-13.csv")
 
 #save to csv
-write.csv(rbind(ArsenalFirstTeam_14, ArsenalU23_14), "C:/Users/peter/Desktop/PlayerData/13-14/ArsenalAllPlayers_13-14.csv")
+write.csv(rbind(ArsenalFirstTeam_13, ArsenalU23_13), "C:/Users/peter/Desktop/PlayerData/Arsenal/12-13/ArsenalAllPlayers_12-13.csv")

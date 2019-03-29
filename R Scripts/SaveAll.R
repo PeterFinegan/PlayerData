@@ -27,9 +27,7 @@ allChelseaPlayers <- (rbind(ChelseaFirstTeam_04,
                             ChelseaU23_09,
                             ChelseaU23_08,
                             ChelseaU23_07,
-                            ChelseaU23_06,
-                            ChelseaU23_05,
-                            ChelseaU23_04))
+                            ChelseaU23_06))
 
 write.csv(allChelseaPlayers, file="C:/Users/peter/Desktop/PlayerData/AllChelseaPlayers.csv")
 
@@ -138,5 +136,39 @@ allLiverpoolPlayers <-    (rbind(LiverpoolFirstTeam_04,
 
 write.csv(allLiverpoolPlayers, file="C:/Users/peter/Desktop/PlayerData/Liverpool/AllLiverpoolPlayers.csv")
 
+allArsenalPlayers <-    (rbind(ArsenalFirstTeam_04,
+                                 ArsenalFirstTeam_05,
+                                 ArsenalFirstTeam_06,
+                                 ArsenalFirstTeam_07,
+                                 ArsenalFirstTeam_08,
+                                 ArsenalFirstTeam_09,
+                                 ArsenalFirstTeam_10, 
+                                 ArsenalFirstTeam_11, 
+                                 ArsenalFirstTeam_12, 
+                                 ArsenalFirstTeam_13, 
+                                 ArsenalFirstTeam_14, 
+                                 ArsenalFirstTeam_15, 
+                                 ArsenalFirstTeam_16, 
+                                 ArsenalFirstTeam_17, 
+                                 ArsenalFirstTeam_18, 
+                                 ArsenalFirstTeam_19, 
+                                 ArsenalU23_19, 
+                                 ArsenalU23_18, 
+                                 ArsenalU23_17, 
+                                 ArsenalU23_16, 
+                                 ArsenalU23_15,
+                                 ArsenalU23_14,
+                                 ArsenalU23_13,
+                                 ArsenalU23_12,
+                                 ArsenalU23_11,
+                                 ArsenalU23_10,
+                                 ArsenalU23_09,
+                                 ArsenalU23_08,
+                                 ArsenalU23_07,
+                                 ArsenalU23_06,
+                                 ArsenalU23_05))
 
-write.csv(rbind(allChelseaPlayers, allCityPlayers, allUtdPlayers, allLiverpoolPlayers), "C:/Users/peter/Desktop/PlayerData/AllPlayers.csv")
+write.csv(allArsenalPlayers, file="C:/Users/peter/Desktop/PlayerData/Arsenal/AllArsenalPlayers.csv")
+
+
+write.csv(rbind(allChelseaPlayers, allCityPlayers, allUtdPlayers, allLiverpoolPlayers, allArsenalPlayers), "C:/Users/peter/Desktop/PlayerData/AllPlayers.csv")

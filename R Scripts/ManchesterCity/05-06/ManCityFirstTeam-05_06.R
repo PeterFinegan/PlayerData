@@ -65,4 +65,4 @@ ManCityFirstTeam_06$PlayerAppearences <- as.numeric(ManCityFirstTeam_06$PlayerAp
 
 write.csv(ManCityFirstTeam_06, "C:/Users/peter/Desktop/PlayerData/Manchester City/05-06/FirstTeam_05-06.csv")
 
-write.csv(rbind(ManCityFirstTeam_06), "C:/Users/peter/Desktop/PlayerData/Manchester City/05-06/AllPlayers_05-06.csv")
+write.csv(rbind(ManCityFirstTeam_06, ManCityU23_06), "C:/Users/peter/Desktop/PlayerData/Manchester City/05-06/AllPlayers_05-06.csv")
